@@ -4,7 +4,9 @@
   "description": "Skeleton app for Express + Typescript",
   "main": "index.js",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "tsc --project ./",
+    "serve": "NODE_ENV=production node dist/app.js"
   },
   "author": "Guy Griffiths",
   "license": "ISC",

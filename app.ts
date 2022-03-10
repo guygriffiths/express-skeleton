@@ -2,7 +2,6 @@ import express from 'express'
 import indexRouter from './routes/index'
 import subRouter from './routes/subroute'
 
-
 const app = express()
 const port = 3003
 
@@ -12,7 +11,7 @@ app.use(express.json())
 app.use('/', indexRouter)
 app.use('/subroute', subRouter)
 
-if (import.meta.env.PROD) {
+if (process.env.NODE_ENV === 'production') {
 	app.listen(port, () => {
 		console.log(`App listening on port ${port}!`)
 	})
